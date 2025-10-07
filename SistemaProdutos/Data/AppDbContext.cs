@@ -16,7 +16,7 @@ namespace SistemaProdutos.Data
         {
             modelBuilder.Entity<Produto>()
                 .Property(p => p.Preco)
-                .HasConversion<double>(); // converte decimal para REAL do SQLite
+                .HasConversion<double>();
         }
 
     }
