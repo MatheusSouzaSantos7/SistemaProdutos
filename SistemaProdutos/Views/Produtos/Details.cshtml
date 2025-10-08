@@ -1,0 +1,33 @@
+﻿@model SistemaProdutos.Models.Produto
+
+@{
+    ViewData["Title"] = "Detalhes do Produto";
+}
+
+<h1>Detalhes do Produto</h1>
+
+<div class="mb-3">
+    <label><strong>Nome:</strong></label>
+    <p>@Model.Nome</p>
+</div>
+
+<div class="mb-3">
+    <label><strong>Descrição:</strong></label>
+    <p>@Model.Descricao</p>
+</div>
+
+<div class="mb-3">
+    <label><strong>Preço:</strong></label>
+    <p>@Model.Preco.ToString("C")</p>
+</div>
+
+<div class="mb-3">
+    <label><strong>Quantidade em Estoque:</strong></label>
+    <p>@Model.Quantidade</p>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Excluir</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</div>
